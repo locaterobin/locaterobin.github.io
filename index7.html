@@ -7,8 +7,9 @@
   <script src="https://cdn.rawgit.com/chjj/marked/master/lib/marked.js"></script>
   <script>
       var link = document.querySelector('link[rel="import"]');
-      var content = link.import; // document.getElementById('content').innerHTML
-      document.getElementById('content').innerHTML = marked(content);
+      var content = link.import; 
+      alert(content);
+      //document.getElementById('content').innerHTML = marked(content);
   </script>
   <title>Marked in the browser</title>
 </head>
