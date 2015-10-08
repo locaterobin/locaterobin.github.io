@@ -6,10 +6,23 @@
   <script src="https://cdn.rawgit.com/chjj/marked/master/lib/marked.js"></script>
 </head>
 <body>
-  <div id="content"></div>
-  <script>
+<div id="content">
+# Marked in browser
+Rendered by **marked**.
+    
+    * one
+    * two
+    * three
+
+why is this not working
+
+will this work?
+---
+
+</div>
+<script>
     document.getElementById('content').innerHTML =
-      marked('# Marked in browser\n\nRendered by **marked**.');
-  </script>
+      marked(document.getElementById('content').innerHTML);
+</script>
 </body>
 </html>
