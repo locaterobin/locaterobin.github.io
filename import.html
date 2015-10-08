@@ -7,16 +7,7 @@
   <script>
     $(document).ready(function() {
         document.getElementById('content').innerHTML = marked(document.getElementById('content').innerHTML);
-        // importDoc references this import's document
-      var importDoc = document.currentScript.ownerDocument;
-    
-      // mainDoc references the main document (the page that's importing us)
-      var mainDoc = document;
-    
-      // Grab the first stylesheet from this import, clone it,
-      // and append it to the importing document.
-      var styles = importDoc.querySelector('link[rel="stylesheet"]');
-      mainDoc.head.appendChild(styles.cloneNode(true));
+       
     });
   </script>
   <style>
