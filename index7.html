@@ -9,11 +9,11 @@
      // var link = document.querySelector('link[rel="import"]');
       // var content = link.import; 
       $.get( "sample.md", function( data ) {
-        document.getElementById('importcontent').innerHTML = marked(data);
+        document.getElementById('content').innerHTML = marked(data);
       });
   </script>
   <title>Import</title>
 </head>
-<body id="importcontent">
+<body>
 </body>
 </html>
