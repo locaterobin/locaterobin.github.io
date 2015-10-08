@@ -8,7 +8,10 @@
   <script>
       var link = document.querySelector('link[rel="import"]');
       var content = link.import; 
-      alert(content.innerHTML);
+      for (i in content) {
+        console.log (i + content[i]);  
+      
+      }
       //document.getElementById('content').innerHTML = marked(content);
   </script>
   <title>Marked in the browser</title>
