@@ -1,28 +1,26 @@
 <!doctype html>
 <html>
 <head>
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' >
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
   <script src="https://cdn.rawgit.com/chjj/marked/master/lib/marked.js"></script>
-  <script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Lora:400,700:latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
   <script>
     $(document).ready(function() {
         document.getElementById('content').innerHTML = marked(document.getElementById('content').innerHTML);
+        // importDoc references this import's document
+      var importDoc = document.currentScript.ownerDocument;
+    
+      // mainDoc references the main document (the page that's importing us)
+      var mainDoc = document;
+    
+      // Grab the first stylesheet from this import, clone it,
+      // and append it to the importing document.
+      var styles = importDoc.querySelector('link[rel="stylesheet"]');
+      mainDoc.head.appendChild(styles.cloneNode(true));
     });
   </script>
   <style>
-      font-family: 'Lora', serif;
+      font-family: 'Ubuntu', serif;
   </style>
 </head>
 <body id="content">
