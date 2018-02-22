@@ -2,7 +2,3 @@ title: My homepage
 description: this is my first attempt. be kind.
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
-
-gems:
-  - jekyll-mentions
